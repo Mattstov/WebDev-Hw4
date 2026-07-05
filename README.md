@@ -1,32 +1,34 @@
-# React + TypeScript + Vite
+# GameVault
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A personal tracker for video games I want to play, am playing, have finished, or dropped. Built for CSCI 39548 Assignment 4.
 
-Currently, two official plugins are available:
+## Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- React + TypeScript (Vite)
+- React Router
+- TanStack Query
+- Zustand (with persist)
+- Tailwind CSS
+- json-server as the backend over `db.json`
 
-## React Compiler
+## Setup
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```
+npm install
+npm run server   # terminal A - json-server on :3001
+npm run dev      # terminal B - vite on :5173
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+Reset the database to the seed data at any time:
+
+```
+npm run reset-db
+```
+
+## Screenshots
+
+_TODO: add screenshots once the UI is built out._
+
+## Stretch features
+
+_TODO: list any stretch features completed._
