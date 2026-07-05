@@ -46,19 +46,19 @@ function ItemDetail() {
   if (!data) return <div>Not found.</div>
 
   return (
-    <div>
+    <div className="max-w-xl">
       <h1 className="text-2xl font-semibold">{data.title}</h1>
-      <p className="text-gray-600">
+      <p className="text-gray-600 dark:text-gray-400">
         {data.creator}, {data.year}
       </p>
-      <p className="text-gray-500">{data.genre}</p>
+      <p className="text-gray-500 dark:text-gray-500">{data.genre}</p>
 
       <div className="mt-4">
         <label className="block text-sm font-medium mb-1">Status</label>
         <select
           value={data.status}
           onChange={(e) => statusMutation.mutate(e.target.value as Status)}
-          className="border rounded px-2 py-1"
+          className="border rounded px-2 py-1 dark:border-gray-600 dark:bg-gray-800"
         >
           {statuses.map((status) => (
             <option key={status} value={status}>
@@ -75,7 +75,7 @@ function ItemDetail() {
           onChange={(e) =>
             ratingMutation.mutate(e.target.value ? Number(e.target.value) : null)
           }
-          className="border rounded px-2 py-1"
+          className="border rounded px-2 py-1 dark:border-gray-600 dark:bg-gray-800"
         >
           <option value="">Not rated</option>
           {[1, 2, 3, 4, 5].map((n) => (
@@ -92,11 +92,11 @@ function ItemDetail() {
           value={note}
           onChange={(e) => setNote(e.target.value)}
           rows={3}
-          className="border rounded w-full p-2"
+          className="border rounded w-full p-2 dark:border-gray-600 dark:bg-gray-800"
         />
         <button
           onClick={() => noteMutation.mutate(note)}
-          className="mt-2 border rounded px-3 py-1"
+          className="mt-2 border rounded px-3 py-1 dark:border-gray-600"
         >
           Save note
         </button>

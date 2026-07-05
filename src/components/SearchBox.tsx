@@ -20,7 +20,7 @@ function SearchBox() {
       value={q}
       onChange={handleChange}
       placeholder="Search by title..."
-      className="border rounded px-3 py-2 w-full max-w-sm"
+      className="border rounded px-3 py-2 w-full sm:max-w-sm dark:border-gray-600 dark:bg-gray-800"
     />
   )
 }

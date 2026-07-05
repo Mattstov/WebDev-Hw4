@@ -16,7 +16,7 @@ function NavBar() {
   const setDensity = useUiStore((state) => state.setDensity)
 
   return (
-    <nav className="flex items-center gap-4 p-4 border-b dark:border-gray-700">
+    <nav className="flex flex-wrap items-center gap-3 p-4 border-b dark:border-gray-700">
       <NavLink to="/" end className={linkClass}>
         Home
       </NavLink>
@@ -29,7 +29,7 @@ function NavBar() {
         About
       </NavLink>
 
-      <div className="ml-auto flex items-center gap-2">
+      <div className="flex flex-wrap items-center gap-2 sm:ml-auto">
         <button
           onClick={toggleTheme}
           className="border rounded px-2 py-1 text-sm dark:border-gray-600"

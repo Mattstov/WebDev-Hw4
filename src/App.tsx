@@ -14,7 +14,7 @@ function App() {
     <div className={theme === 'dark' ? 'dark' : ''}>
       <div className="min-h-screen bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100">
         <NavBar />
-        <main className="p-4">
+        <main className="p-4 max-w-5xl mx-auto">
           <Routes>
             <Route path="/" element={<Catalog />} />
             <Route path="/items/:id" element={<ItemDetail />} />
