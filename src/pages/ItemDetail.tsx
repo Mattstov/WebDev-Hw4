@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import { fetchItem, updateItem } from '../api/items'
-import type { Status } from '../types/item'
+import type { Item, Status } from '../types/item'
 
 const statuses: Status[] = ['want', 'active', 'done', 'dropped']
 
@@ -22,23 +22,36 @@ function ItemDetail() {
     setNote(data?.note ?? '')
   }, [data])
 
-  function onSuccess() {
+  function invalidate() {
     queryClient.invalidateQueries({ queryKey: ['items'] })
   }
 
   const statusMutation = useMutation({
     mutationFn: (status: Status) => updateItem(id!, { status }),
-    onSuccess,
+    onMutate: async (status) => {
+      await queryClient.cancelQueries({ queryKey: ['items', id] })
+      const previous = queryClient.getQueryData<Item>(['items', id])
+      queryClient.setQueryData<Item>(['items', id], (old) =>
+        old ? { ...old, status } : old,
+      )
+      return { previous }
+    },
+    onError: (_err, _status, context) => {
+      if (context?.previous) {
+        queryClient.setQueryData(['items', id], context.previous)
+      }
+    },
+    onSettled: invalidate,
   })
 
   const ratingMutation = useMutation({
     mutationFn: (rating: number | null) => updateItem(id!, { rating }),
-    onSuccess,
+    onSuccess: invalidate,
   })
 
   const noteMutation = useMutation({
     mutationFn: (note: string) => updateItem(id!, { note: note || null }),
-    onSuccess,
+    onSuccess: invalidate,
   })
 
   if (isLoading) return <div>Loading...</div>
