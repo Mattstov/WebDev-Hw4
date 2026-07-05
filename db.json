@@ -1,19 +1,154 @@
 {
   "items": [
-    { "id": 1, "title": "Elden Ring", "creator": "FromSoftware", "year": 2022, "genre": "Action RPG", "status": "done", "rating": 5, "note": "Best boss designs ever." },
-    { "id": 2, "title": "Hollow Knight", "creator": "Team Cherry", "year": 2017, "genre": "Metroidvania", "status": "done", "rating": 5, "note": "Tight controls, great atmosphere." },
-    { "id": 3, "title": "It Takes Two", "creator": "Hazelight Studios", "year": 2021, "genre": "Adventure", "status": "done", "rating": 5, "note": "Perfect co-op game." },
-    { "id": 4, "title": "Untitled Goose Game", "creator": "House House", "year": 2019, "genre": "Puzzle", "status": "done", "rating": 4, "note": null },
-    { "id": 5, "title": "Baldur's Gate 3", "creator": "Larian Studios", "year": 2023, "genre": "RPG", "status": "active", "rating": null, "note": "40 hours in, no signs of stopping." },
-    { "id": 6, "title": "The Legend of Zelda: Tears of the Kingdom", "creator": "Nintendo", "year": 2023, "genre": "Action Adventure", "status": "active", "rating": null, "note": null },
-    { "id": 7, "title": "Stardew Valley", "creator": "ConcernedApe", "year": 2016, "genre": "Simulation", "status": "active", "rating": null, "note": "Just got the greenhouse." },
-    { "id": 8, "title": "Minecraft", "creator": "Mojang", "year": 2011, "genre": "Sandbox", "status": "active", "rating": 5, "note": "Still building the castle." },
-    { "id": 9, "title": "Cyberpunk 2077", "creator": "CD Projekt Red", "year": 2020, "genre": "Action RPG", "status": "want", "rating": null, "note": null },
-    { "id": 10, "title": "Persona 5 Royal", "creator": "Atlus", "year": 2019, "genre": "RPG", "status": "want", "rating": null, "note": null },
-    { "id": 11, "title": "Return of the Obra Dinn", "creator": "Lucas Pope", "year": 2018, "genre": "Puzzle", "status": "want", "rating": null, "note": null },
-    { "id": 12, "title": "Sekiro: Shadows Die Twice", "creator": "FromSoftware", "year": 2019, "genre": "Action", "status": "want", "rating": null, "note": "Heard the combat is brutal." },
-    { "id": 13, "title": "No Man's Sky", "creator": "Hello Games", "year": 2016, "genre": "Simulation", "status": "dropped", "rating": 2, "note": "Buggy at launch, never went back." },
-    { "id": 14, "title": "Fallout 76", "creator": "Bethesda Game Studios", "year": 2018, "genre": "RPG", "status": "dropped", "rating": 1, "note": "Not for me." },
-    { "id": 15, "title": "Anthem", "creator": "BioWare", "year": 2019, "genre": "Action RPG", "status": "dropped", "rating": 2, "note": null }
+    {
+      "id": 1,
+      "title": "Elden Ring",
+      "creator": "FromSoftware",
+      "year": 2022,
+      "genre": "Action RPG",
+      "status": "done",
+      "rating": 5,
+      "note": "Best boss designs ever."
+    },
+    {
+      "id": 2,
+      "title": "Hollow Knight",
+      "creator": "Team Cherry",
+      "year": 2017,
+      "genre": "Metroidvania",
+      "status": "done",
+      "rating": 5,
+      "note": "Tight controls, great atmosphere."
+    },
+    {
+      "id": 3,
+      "title": "It Takes Two",
+      "creator": "Hazelight Studios",
+      "year": 2021,
+      "genre": "Adventure",
+      "status": "done",
+      "rating": 5,
+      "note": "Perfect co-op game."
+    },
+    {
+      "id": 4,
+      "title": "Untitled Goose Game",
+      "creator": "House House",
+      "year": 2019,
+      "genre": "Puzzle",
+      "status": "done",
+      "rating": 4,
+      "note": null
+    },
+    {
+      "id": 5,
+      "title": "Baldur's Gate 3",
+      "creator": "Larian Studios",
+      "year": 2023,
+      "genre": "RPG",
+      "status": "active",
+      "rating": null,
+      "note": "40 hours in, no signs of stopping."
+    },
+    {
+      "id": 6,
+      "title": "The Legend of Zelda: Tears of the Kingdom",
+      "creator": "Nintendo",
+      "year": 2023,
+      "genre": "Action Adventure",
+      "status": "active",
+      "rating": null,
+      "note": null
+    },
+    {
+      "id": 7,
+      "title": "Stardew Valley",
+      "creator": "ConcernedApe",
+      "year": 2016,
+      "genre": "Simulation",
+      "status": "active",
+      "rating": null,
+      "note": "Just got the greenhouse."
+    },
+    {
+      "id": 8,
+      "title": "Minecraft",
+      "creator": "Mojang",
+      "year": 2011,
+      "genre": "Sandbox",
+      "status": "active",
+      "rating": 5,
+      "note": "Still building the castle."
+    },
+    {
+      "id": 9,
+      "title": "Cyberpunk 2077",
+      "creator": "CD Projekt Red",
+      "year": 2020,
+      "genre": "Action RPG",
+      "status": "want",
+      "rating": null,
+      "note": null
+    },
+    {
+      "id": 10,
+      "title": "Persona 5 Royal",
+      "creator": "Atlus",
+      "year": 2019,
+      "genre": "RPG",
+      "status": "want",
+      "rating": null,
+      "note": null
+    },
+    {
+      "id": 11,
+      "title": "Return of the Obra Dinn",
+      "creator": "Lucas Pope",
+      "year": 2018,
+      "genre": "Puzzle",
+      "status": "want",
+      "rating": null,
+      "note": null
+    },
+    {
+      "id": 12,
+      "title": "Sekiro: Shadows Die Twice",
+      "creator": "FromSoftware",
+      "year": 2019,
+      "genre": "Action",
+      "status": "want",
+      "rating": null,
+      "note": "Heard the combat is brutal."
+    },
+    {
+      "id": 13,
+      "title": "No Man's Sky",
+      "creator": "Hello Games",
+      "year": 2016,
+      "genre": "Simulation",
+      "status": "dropped",
+      "rating": 2,
+      "note": "Buggy at launch, never went back."
+    },
+    {
+      "id": 14,
+      "title": "Fallout 76",
+      "creator": "Bethesda Game Studios",
+      "year": 2018,
+      "genre": "RPG",
+      "status": "dropped",
+      "rating": 1,
+      "note": "Not for me."
+    },
+    {
+      "id": 15,
+      "title": "Anthem",
+      "creator": "BioWare",
+      "year": 2019,
+      "genre": "Action RPG",
+      "status": "dropped",
+      "rating": 2,
+      "note": null
+    }
   ]
 }
