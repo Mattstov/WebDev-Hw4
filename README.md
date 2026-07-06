@@ -36,10 +36,13 @@ Reset the database to the seed data at any time:
 npm run reset-db
 ```
 
-## Stretch Features Done
+## Features
 
-- **Optimistic status updates** - the status `useMutation` uses `onMutate` to write the new status to the cache right away, `onError` to roll back to the previous value if the request fails, and `onSettled` to invalidate and refetch the real data.
+- Browse, search (by title, via URL), and filter the catalog by status
+- Item detail page with status, rating, and note editing
+- Light/dark theme and compact/comfortable density, both persisted across reloads
+- 404 page for unknown routes and unknown item ids
 
-## Screenshots
+## Stretch features done
 
-Screenshots to be added before submission.
+- Optimistic status updates: changing an item's status on the detail page updates the UI immediately, then rolls back if the request fails.
